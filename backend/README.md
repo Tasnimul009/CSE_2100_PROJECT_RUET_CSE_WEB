@@ -82,3 +82,14 @@ npm run dev
 - Root directory: `backend`
 - Add all `.env` variables from your local backend `.env` in Render dashboard.
 - After deployment, set frontend `VITE_STUDENT_API_BASE_URL` to your Render backend URL + `/api`.
+
+Required MongoDB env vars on Render:
+- `MONGODB_URI` (or `MONGO_URI`) = full Atlas `mongodb+srv://...` connection string
+- Optional: `MONGODB_DB_NAME`
+- Optional (recommended on Render): `MONGODB_FORCE_IPV4=true`
+- Optional: `MONGODB_SERVER_SELECTION_TIMEOUT_MS=10000`
+
+If deployment logs show Atlas connectivity errors:
+- In MongoDB Atlas Network Access, allow `0.0.0.0/0` (quickest for cloud hosts) or add your Render static egress IP.
+- Confirm Atlas Database Access user/password are correct in the connection string.
+- Confirm the Atlas cluster is active and not paused.
