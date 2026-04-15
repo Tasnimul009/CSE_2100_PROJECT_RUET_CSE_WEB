@@ -130,6 +130,7 @@ export const getAcademicFallbackItems = (endpoint, params = {}) => {
 
 export const mergeAcademicItemsWithFallback = (endpoint, apiItems = [], params = {}) => {
   const fallbackItems = getAcademicFallbackItems(endpoint, params);
+  const isRoutineEndpoint = endpoint === '/routines';
 
   if (!Array.isArray(apiItems) || apiItems.length === 0) {
     return fallbackItems;
@@ -148,9 +149,21 @@ export const mergeAcademicItemsWithFallback = (endpoint, apiItems = [], params =
   }
 
   return apiItems.map((item) => {
+    const requestedRoutineType = toTrimmedLower(item?.type || item?.category);
+
     const matchedFallback =
       fallbackByKey.get(buildFallbackKey(item))
-      || fallbackByTitle.get(toTrimmedLower(item?.title));
+      || fallbackByTitle.get(toTrimmedLower(item?.title))
+      || (
+        isRoutineEndpoint && requestedRoutineType
+          ? fallbackItems.find((fallback) => toTrimmedLower(fallback?.type || fallback?.category) === requestedRoutineType)
+          : null
+      )
+      || (
+        isRoutineEndpoint
+          ? fallbackItems[0] || null
+          : null
+      );
 
     if (!matchedFallback) {
       return item;
