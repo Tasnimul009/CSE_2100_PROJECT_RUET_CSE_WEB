@@ -23,7 +23,7 @@ export default function DocumentCard({ item, onPreview }) {
       <div className="mt-6 border-t border-dashed border-slate-200 pt-4">
         {publishDate ? <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-400">Published {new Date(publishDate).toLocaleDateString()}</p> : null}
         <div className="mt-4 flex flex-wrap gap-3">
-          {link && onPreview ? (
+          {onPreview ? (
             <button className="btn-primary" type="button" onClick={onPreview}>
               Open Details Page
             </button>
