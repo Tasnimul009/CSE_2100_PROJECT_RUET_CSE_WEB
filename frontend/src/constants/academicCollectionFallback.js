@@ -10,6 +10,11 @@ const buildFallbackKey = (item = {}) => [
   toTrimmedLower(item.semester),
 ].join('::');
 
+const buildCategorySemesterKey = (item = {}) => [
+  toTrimmedLower(item.category),
+  toTrimmedLower(item.semester),
+].join('::');
+
 const academicCollectionFallback = {
   '/programs': [
     {
@@ -138,6 +143,9 @@ export const mergeAcademicItemsWithFallback = (endpoint, apiItems = [], params =
 
   const fallbackByKey = new Map();
   const fallbackByTitle = new Map();
+  const fallbackByCategorySemester = new Map();
+  const fallbackByCategory = new Map();
+  const fallbackBySemester = new Map();
 
   for (const fallback of fallbackItems) {
     fallbackByKey.set(buildFallbackKey(fallback), fallback);
@@ -146,21 +154,45 @@ export const mergeAcademicItemsWithFallback = (endpoint, apiItems = [], params =
     if (fallbackTitle) {
       fallbackByTitle.set(fallbackTitle, fallback);
     }
+
+    const categorySemesterKey = buildCategorySemesterKey(fallback);
+    if (categorySemesterKey !== '::') {
+      fallbackByCategorySemester.set(categorySemesterKey, fallback);
+    }
+
+    const fallbackCategory = toTrimmedLower(fallback.category);
+    if (fallbackCategory && !fallbackByCategory.has(fallbackCategory)) {
+      fallbackByCategory.set(fallbackCategory, fallback);
+    }
+
+    const fallbackSemester = toTrimmedLower(fallback.semester);
+    if (fallbackSemester && !fallbackBySemester.has(fallbackSemester)) {
+      fallbackBySemester.set(fallbackSemester, fallback);
+    }
   }
 
   return apiItems.map((item) => {
+    const itemPrimaryLink = item?.fileUrl || item?.pdfUrl || item?.link || '';
+    const itemHasFile = hasValue(itemPrimaryLink);
+
     const requestedRoutineType = toTrimmedLower(item?.type || item?.category);
+    const requestedCategory = toTrimmedLower(item?.category);
+    const requestedSemester = toTrimmedLower(item?.semester);
+    const requestedCategorySemester = buildCategorySemesterKey(item);
 
     const matchedFallback =
       fallbackByKey.get(buildFallbackKey(item))
       || fallbackByTitle.get(toTrimmedLower(item?.title))
+      || (requestedCategorySemester !== '::' ? fallbackByCategorySemester.get(requestedCategorySemester) : null)
+      || (requestedCategory ? fallbackByCategory.get(requestedCategory) : null)
+      || (requestedSemester ? fallbackBySemester.get(requestedSemester) : null)
       || (
         isRoutineEndpoint && requestedRoutineType
           ? fallbackItems.find((fallback) => toTrimmedLower(fallback?.type || fallback?.category) === requestedRoutineType)
           : null
       )
       || (
-        isRoutineEndpoint
+        !itemHasFile
           ? fallbackItems[0] || null
           : null
       );
@@ -168,8 +200,6 @@ export const mergeAcademicItemsWithFallback = (endpoint, apiItems = [], params =
     if (!matchedFallback) {
       return item;
     }
-
-    const itemPrimaryLink = item?.fileUrl || item?.pdfUrl || item?.link || '';
 
     return {
       ...matchedFallback,
