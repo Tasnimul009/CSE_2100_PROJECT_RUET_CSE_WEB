@@ -4,8 +4,12 @@ let cachedCredentialAccounts = null
 const API_BASE = String(
   import.meta.env.VITE_STUDENT_API_BASE_URL
     || import.meta.env.VITE_API_BASE_URL
-    || 'http://localhost:5000/api',
+    || (import.meta.env.DEV ? 'http://localhost:5000/api' : ''),
 ).replace(/\/+$/, '')
+
+if (!API_BASE) {
+  console.warn('Missing VITE_STUDENT_API_BASE_URL/VITE_API_BASE_URL in production environment. Student API calls will use relative paths.')
+}
 
 const norm = (v) => String(v ?? '').trim()
 

@@ -23,8 +23,18 @@ export const clearAuthSession = () => {
   localStorage.removeItem(USER_KEY);
 };
 
+const API_BASE_URL = String(
+  import.meta.env.VITE_API_BASE_URL
+    || import.meta.env.VITE_STUDENT_API_BASE_URL
+    || (import.meta.env.DEV ? 'http://localhost:5000/api' : ''),
+).trim().replace(/\/+$/, '');
+
+if (!API_BASE_URL) {
+  console.warn('Missing VITE_API_BASE_URL/VITE_STUDENT_API_BASE_URL in production environment. API calls will use relative paths.');
+}
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api',
+  baseURL: API_BASE_URL || undefined,
 });
 
 api.interceptors.request.use((config) => {
