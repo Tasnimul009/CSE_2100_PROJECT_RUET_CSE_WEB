@@ -6,7 +6,7 @@ import LoadingState from '../../components/common/LoadingState';
 import EmptyState from '../../components/common/EmptyState';
 
 import { fetchCollection } from '../../services/api';
-import { getAcademicFallbackItems } from '../../constants/academicCollectionFallback';
+import { getAcademicFallbackItems, mergeAcademicItemsWithFallback } from '../../constants/academicCollectionFallback';
 
 const RESOURCE_CONFIG = {
   programs: {
@@ -171,7 +171,9 @@ export default function AcademicItemView() {
         const response = await fetchCollection(config.endpoint, {});
         const apiItems = Array.isArray(response?.data) ? response.data : [];
 
-        if (apiItems.length && applyFromEntries(apiItems)) {
+        const mergedItems = mergeAcademicItemsWithFallback(config.endpoint, apiItems, {});
+
+        if (mergedItems.length && applyFromEntries(mergedItems)) {
           return;
         }
 

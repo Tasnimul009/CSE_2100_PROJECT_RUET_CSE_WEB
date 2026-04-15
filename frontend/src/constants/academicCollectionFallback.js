@@ -1,5 +1,15 @@
 const todayIso = new Date().toISOString();
 
+const toTrimmedLower = (value) => String(value ?? '').trim().toLowerCase();
+
+const hasValue = (value) => String(value ?? '').trim().length > 0;
+
+const buildFallbackKey = (item = {}) => [
+  toTrimmedLower(item.title),
+  toTrimmedLower(item.type),
+  toTrimmedLower(item.semester),
+].join('::');
+
 const academicCollectionFallback = {
   '/programs': [
     {
@@ -116,6 +126,48 @@ export const getAcademicFallbackItems = (endpoint, params = {}) => {
   }
 
   return items;
+};
+
+export const mergeAcademicItemsWithFallback = (endpoint, apiItems = [], params = {}) => {
+  const fallbackItems = getAcademicFallbackItems(endpoint, params);
+
+  if (!Array.isArray(apiItems) || apiItems.length === 0) {
+    return fallbackItems;
+  }
+
+  const fallbackByKey = new Map();
+  const fallbackByTitle = new Map();
+
+  for (const fallback of fallbackItems) {
+    fallbackByKey.set(buildFallbackKey(fallback), fallback);
+
+    const fallbackTitle = toTrimmedLower(fallback.title);
+    if (fallbackTitle) {
+      fallbackByTitle.set(fallbackTitle, fallback);
+    }
+  }
+
+  return apiItems.map((item) => {
+    const matchedFallback =
+      fallbackByKey.get(buildFallbackKey(item))
+      || fallbackByTitle.get(toTrimmedLower(item?.title));
+
+    if (!matchedFallback) {
+      return item;
+    }
+
+    const itemPrimaryLink = item?.fileUrl || item?.pdfUrl || item?.link || '';
+
+    return {
+      ...matchedFallback,
+      ...item,
+      description: hasValue(item?.description) ? item.description : matchedFallback.description,
+      category: hasValue(item?.category) ? item.category : matchedFallback.category,
+      semester: hasValue(item?.semester) ? item.semester : matchedFallback.semester,
+      fileUrl: hasValue(itemPrimaryLink) ? itemPrimaryLink : matchedFallback.fileUrl,
+      link: hasValue(item?.link) ? item.link : matchedFallback.link,
+    };
+  });
 };
 
 export default academicCollectionFallback;

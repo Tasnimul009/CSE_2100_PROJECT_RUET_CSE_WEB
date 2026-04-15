@@ -8,7 +8,7 @@ import EmptyState from './EmptyState';
 import DocumentCard from './DocumentCard';
 import InfoCard from './InfoCard';
 import { fetchCollection } from '../../services/api';
-import { getAcademicFallbackItems } from '../../constants/academicCollectionFallback';
+import { getAcademicFallbackItems, mergeAcademicItemsWithFallback } from '../../constants/academicCollectionFallback';
 
 const sidebarItems = [
   'Filter by category and semester',
@@ -95,14 +95,10 @@ export default function CollectionPage({
         const res = await fetchCollection(endpoint, params);
         const apiItems = Array.isArray(res?.data) ? res.data : [];
 
-        if (apiItems.length) {
-          if (mounted) {
-            setItems(apiItems);
-          }
-          return;
+        const mergedItems = mergeAcademicItemsWithFallback(endpoint, apiItems, params);
+        if (mounted) {
+          setItems(mergedItems);
         }
-
-        applyFallback();
       } catch (error) {
         console.error(error);
         applyFallback();
