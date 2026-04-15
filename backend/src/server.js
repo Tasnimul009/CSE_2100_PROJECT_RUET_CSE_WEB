@@ -12,6 +12,17 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware')
 
 const app = express()
 
+process.on('unhandledRejection', (reason) => {
+	console.error('Unhandled promise rejection during startup/runtime:')
+	console.error(reason)
+})
+
+process.on('uncaughtException', (error) => {
+	console.error('Uncaught exception during startup/runtime:')
+	console.error(error)
+	process.exit(1)
+})
+
 const rawCorsOrigin = String(process.env.CORS_ORIGIN || '*').trim()
 if (!rawCorsOrigin || rawCorsOrigin === '*') {
 	app.use(cors())
@@ -51,6 +62,9 @@ const PORT = Number.parseInt(process.env.PORT || '5000', 10)
 
 const startServer = async () => {
 	try {
+		const mongoUriConfigured = Boolean(process.env.MONGODB_URI || process.env.MONGO_URI)
+		console.log(`Startup config -> NODE_ENV=${process.env.NODE_ENV || 'undefined'}, PORT=${PORT}, MONGO_URI_SET=${mongoUriConfigured}`)
+
 		await connectMongoDB()
 		configureCloudinary()
 
@@ -58,8 +72,9 @@ const startServer = async () => {
 			console.log(`Backend running on port ${PORT}`)
 		})
 	} catch (error) {
-		console.error(`Could not start backend: ${error.message}`)
-		process.exit(1)
+		console.error('Could not start backend.')
+		console.error(error && error.stack ? error.stack : error)
+		process.exitCode = 1
 	}
 }
 
