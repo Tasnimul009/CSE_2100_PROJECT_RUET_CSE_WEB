@@ -1,0 +1,12 @@
+RUET CSE CT Routine (Sample)
+
+Type: Continuous Test
+Section: A
+Semester: Level 1 Term 1
+
+Week 2: CSE-101 CT-1
+Week 4: MAT-101 CT-1
+Week 6: PHY-101 CT-1
+Week 8: CSE-101 CT-2
+
+Prepared for website document preview integration.

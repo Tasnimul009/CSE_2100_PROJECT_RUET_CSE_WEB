@@ -18,6 +18,7 @@ import AcademicCalendar from '../pages/quickMenu/AcademicCalendar'
 import ClassRoutine from '../pages/quickMenu/ClassRoutine'
 import ExamRoutine from '../pages/quickMenu/ExamRoutine'
 import CtRoutine from '../pages/quickMenu/CtRoutine'
+import AcademicItemView from '../pages/quickMenu/AcademicItemView'
 
 import AdminDashboard from '../pages/admin/AdminDashboard'
 import AdminLogin from '../pages/admin/AdminLogin'
@@ -50,6 +51,7 @@ import MessageFromHead from '../pages/about/MessageFromHead'
 import MissionVision from '../pages/about/MissionVision'
 import History from '../pages/about/History'
 import Achievement from '../pages/about/Achievement'
+import Alumni from '../pages/alumni/Alumni'
 
 // import Contact          from '../pages/Contact'
 
@@ -169,12 +171,14 @@ const AppRoutes = () => {
         <Route path="/about/mission-vision" element={<MissionVision />} />
         <Route path="/about/history" element={<History />} />
         <Route path="/about/achievement" element={<Achievement />} />
+        <Route path="/alumni" element={<Alumni />} />
 
         <Route path="/facilities/classroom" element={<Classroom />} />
         <Route path="/facilities/labs" element={<Labs />} />
         <Route path="/facilities/library" element={<Library />} />
         <Route path="/facilities/seminar-room" element={<SeminarRoom />} />
         <Route path="/facilities/ict" element={<ICTInfrastructure />} />
+        <Route path="/academic" element={<Navigate to="/academic/programs" replace />} />
         <Route path="/facilities/seminar" element={<Navigate to="/facilities/seminar-room" replace />} />
 
         {/* <Route path="/academic/programs"       element={<Programs />} /> */}
@@ -210,6 +214,7 @@ const AppRoutes = () => {
       <Route path="/class-routine" element={<ClassRoutine />} />
       <Route path="/examination-routine" element={<ExamRoutine />} />
       <Route path="/ct-routine" element={<CtRoutine />} />
+      <Route path="/academic/view/:resource/:itemId" element={<AcademicItemView />} />
 
       {/* Aliases for existing main navigation links */}
       <Route path="/academic/programs" element={<Programs />} />

@@ -1,0 +1,11 @@
+RUET CSE Academic Document
+
+Title: BSc Program Overview
+Category: Undergraduate
+
+Summary:
+- Program duration: 4 years (8 semesters)
+- Core areas: Programming, Algorithms, Systems, Networks, AI
+- Graduation requirement: 160 credits (example)
+
+Prepared for website document preview integration.

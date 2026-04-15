@@ -4,9 +4,13 @@ const express = require('express')
 const cors = require('cors')
 const helmet = require('helmet')
 const morgan = require('morgan')
+const path = require('path')
 
 const { connectMongoDB } = require('./config/db')
 const { configureCloudinary } = require('./config/cloudinary')
+const { ensureDefaultAdmin } = require('./controllers/authController')
+const authRoutes = require('./routes/authRoutes')
+const { createAcademicRouter } = require('./routes/academicRoutes')
 const studentRoutes = require('./routes/studentRoutes')
 const { notFound, errorHandler } = require('./middleware/errorMiddleware')
 
@@ -41,6 +45,7 @@ if (!rawCorsOrigin || rawCorsOrigin === '*') {
 app.use(helmet())
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true }))
+app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')))
 
 if (process.env.NODE_ENV !== 'production') {
 	app.use(morgan('dev'))
@@ -49,11 +54,19 @@ if (process.env.NODE_ENV !== 'production') {
 app.get('/api/health', (_req, res) => {
 	res.json({
 		success: true,
-		message: 'Student backend is running',
+		message: 'RUET CSE backend is running',
 	})
 })
 
+app.use('/api/auth', authRoutes)
 app.use('/api/students', studentRoutes)
+app.use('/api/notices', createAcademicRouter('notice'))
+app.use('/api/events', createAcademicRouter('event'))
+app.use('/api/programs', createAcademicRouter('program'))
+app.use('/api/curriculums', createAcademicRouter('curriculum'))
+app.use('/api/syllabi', createAcademicRouter('syllabus'))
+app.use('/api/calendars', createAcademicRouter('calendar'))
+app.use('/api/routines', createAcademicRouter('routine'))
 
 app.use(notFound)
 app.use(errorHandler)
@@ -66,6 +79,7 @@ const startServer = async () => {
 		console.log(`Startup config -> NODE_ENV=${process.env.NODE_ENV || 'undefined'}, PORT=${PORT}, MONGO_URI_SET=${mongoUriConfigured}`)
 
 		await connectMongoDB()
+		await ensureDefaultAdmin()
 		configureCloudinary()
 
 		app.listen(PORT, () => {

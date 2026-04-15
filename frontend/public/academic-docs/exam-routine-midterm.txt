@@ -1,0 +1,12 @@
+RUET CSE Examination Routine (Sample)
+
+Exam Type: Midterm
+Semester: Level 2 Term 1
+Session: 2025-26
+
+Day 1: Data Structures
+Day 2: Discrete Mathematics
+Day 3: Electronics
+Day 4: Statistics
+
+Prepared for website document preview integration.

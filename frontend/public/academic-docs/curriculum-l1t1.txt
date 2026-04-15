@@ -1,0 +1,12 @@
+RUET CSE Curriculum Document
+
+Title: Level 1 Term 1 Curriculum
+
+Included modules:
+- Structured Programming
+- Differential Calculus
+- Physics
+- Electrical Circuits
+- Engineering Drawing
+
+Prepared for website document preview integration.

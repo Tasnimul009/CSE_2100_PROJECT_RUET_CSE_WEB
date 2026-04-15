@@ -1,0 +1,11 @@
+RUET CSE Academic Document
+
+Title: MSc Program Overview
+Category: Postgraduate
+
+Summary:
+- Advanced coursework and thesis/research track
+- Focus: Systems, Data Science, AI, Security
+- Admission and thesis policy as per department rules
+
+Prepared for website document preview integration.

@@ -34,6 +34,13 @@ If your source file path is different:
 node src/scripts/seedStudentsFromJson.js ../frontend/public/students.json
 ```
 
+## 2.1) Seed Academic Demo Data
+
+From the `backend` folder run:
+```bash
+npm run seed:academic
+```
+
 ## 3) Student API Endpoints
 
 Base URL: `/api/students`
@@ -63,7 +70,39 @@ Base URL: `/api/students`
   - `multipart/form-data`
   - Fields: `username`, `image`
 
-## 4) Frontend Connection
+## 4) Admin Auth API Endpoints
+
+Base URL: `/api/auth`
+
+- `POST /api/auth/login`
+  - JSON body: `{ "email": "admin@ruet.ac.bd", "password": "admin123" }`
+
+- `GET /api/auth/me`
+  - Requires header: `Authorization: Bearer <token>`
+
+Default admin is auto-created on server start using these env values:
+- `ADMIN_NAME`
+- `ADMIN_EMAIL`
+- `ADMIN_PASSWORD`
+
+## 5) Academic Content API Endpoints
+
+Each endpoint supports:
+- `GET /` (public)
+- `POST /` (admin token required, `multipart/form-data` supported with `file`)
+- `PATCH /:id` (admin token required)
+- `DELETE /:id` (admin token required)
+
+Endpoints:
+- `/api/notices`
+- `/api/events`
+- `/api/programs`
+- `/api/curriculums`
+- `/api/syllabi`
+- `/api/calendars`
+- `/api/routines` (optional query `?type=class|exam|ct`)
+
+## 6) Frontend Connection
 
 In `frontend/.env` set:
 ```env
@@ -75,7 +114,7 @@ Then run frontend:
 npm run dev
 ```
 
-## 5) Render Deployment Notes
+## 7) Render Deployment Notes
 
 - Build command: `npm install`
 - Start command: `npm start`

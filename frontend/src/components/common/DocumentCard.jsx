@@ -1,5 +1,5 @@
-export default function DocumentCard({ item }) {
-  const link = item.fileUrl || item.pdfUrl || item.link;
+export default function DocumentCard({ item, onPreview }) {
+  const link = item._resolvedLink || item.fileUrl || item.pdfUrl || item.link;
   const publishDate = item.createdAt || item.publishDate || item.updatedAt;
 
   return (
@@ -23,14 +23,29 @@ export default function DocumentCard({ item }) {
       <div className="mt-6 border-t border-dashed border-slate-200 pt-4">
         {publishDate ? <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-400">Published {new Date(publishDate).toLocaleDateString()}</p> : null}
         <div className="mt-4 flex flex-wrap gap-3">
-          {link ? (
+          {link && onPreview ? (
+            <button className="btn-primary" type="button" onClick={onPreview}>
+              Open Details Page
+            </button>
+          ) : null}
+
+          {link && !onPreview ? (
             <a className="btn-primary" href={link} target="_blank" rel="noreferrer">
               View Document
+            </a>
+          ) : null}
+
+          {link ? (
+            <a className="btn-outline" href={link} target="_blank" rel="noreferrer">
+              Open Raw File
             </a>
           ) : (
             <span className="rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-500">File pending</span>
           )}
-          <span className="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700">Archive Ready</span>
+
+          <span className="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700">
+            {onPreview ? 'Detail View Ready' : 'Archive Ready'}
+          </span>
         </div>
       </div>
     </article>

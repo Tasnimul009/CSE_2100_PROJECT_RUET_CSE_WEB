@@ -1,0 +1,9 @@
+RUET CSE Academic Calendar 2026 (Sample)
+
+- Semester start: January
+- Mid-term exam: March
+- Recess: June
+- Final exam: August
+- Result publication: September
+
+Prepared for website document preview integration.

@@ -1,0 +1,12 @@
+RUET CSE Class Routine (Sample)
+
+Semester: Level 1 Term 1
+Session: 2025-26
+
+Mon: Structured Programming, Math
+Tue: Physics, Lab
+Wed: Electrical Circuits
+Thu: Programming Lab
+Fri: Off/Advising
+
+Prepared for website document preview integration.

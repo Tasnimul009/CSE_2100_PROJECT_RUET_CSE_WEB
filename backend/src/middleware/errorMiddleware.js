@@ -24,10 +24,10 @@ const errorHandler = (err, req, res, next) => {
 
   if (err?.code === 'LIMIT_FILE_SIZE') {
     statusCode = 413
-    message = 'Image is too large for upload'
+    message = 'Uploaded file is too large'
   }
 
-  if (/only image files are allowed/i.test(message)) {
+  if (/only .* files are allowed/i.test(message)) {
     statusCode = 400
   }
 

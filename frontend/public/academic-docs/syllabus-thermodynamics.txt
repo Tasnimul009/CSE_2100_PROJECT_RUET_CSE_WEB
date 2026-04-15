@@ -1,0 +1,11 @@
+RUET CSE Syllabus Document
+
+Title: Thermodynamics Syllabus (Sample)
+
+Outline:
+- First law, second law
+- Entropy and energy conversion
+- Problem-solving sessions
+- Continuous assessments and final exam
+
+Prepared for website document preview integration.
