@@ -1,0 +1,532 @@
+{
+  "version": 6,
+  "source": {
+    "type": "html",
+    "file": "../../../ruet.html",
+    "generatedAt": "2026-04-02T19:27:36.150Z"
+  },
+  "dean": {
+    "id": "dean-cse",
+    "name": "Prof. Dr. Boshir Ahmed",
+    "designation": "Dean, Faculty of Computer Science & Engineering",
+    "department": "Department of Computer Science & Engineering",
+    "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo122.jpg",
+    "profileUrl": "https://www.cse.ruet.ac.bd/boshir",
+    "message": "Welcome to the Faculty of Computer Science & Engineering. We are committed to excellence in teaching, research, and innovation, and to supporting our students in achieving their highest potential."
+  },
+  "head": {
+    "id": "hod-cse",
+    "name": "Dr. Md. Shahid Uz Zaman",
+    "designation": "Head of the Department",
+    "department": "Department of Computer Science & Engineering",
+    "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo116.png",
+    "profileUrl": "https://www.cse.ruet.ac.bd/szaman22ruet",
+    "socials": {
+      "fb": "",
+      "gs": "",
+      "li": "",
+      "tw": ""
+    },
+    "message": "Welcome to the Department of CSE, RUET. Our faculty and students work together to build strong fundamentals and real-world skills through academic excellence and collaborative learning."
+  },
+  "members": [
+    {
+      "name": "Dr. Md. Nazrul Islam Mondal",
+      "profileUrl": "https://www.cse.ruet.ac.bd/mondal",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo60.jpg",
+      "designation": "Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "https://www.facebook.com/Mni-mondal",
+        "gs": "",
+        "li": "https://www.linkedin.com/in/dr-engr-md-nazrul-islam-mondal-782605a9",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Dr. Md. Rabiul Islam",
+      "profileUrl": "https://www.cse.ruet.ac.bd/rabiul-cse",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/assets/images/default_avatar.png",
+      "designation": "Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Prof. Dr. Md. Al Mamun",
+      "profileUrl": "https://www.cse.ruet.ac.bd/dr.almamun",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo36.jpg",
+      "designation": "Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "https://www.facebook.com/profile.php?id=581920608",
+        "gs": "https://scholar.google.com/citations?user=36fC4QcAAAAJ&hl=en",
+        "li": "https://www.linkedin.com/in/al-mamun-81b49824/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "A H M Sarowar Sattar",
+      "profileUrl": "https://www.cse.ruet.ac.bd/sarowar",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo85.JPG",
+      "designation": "Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Dr. Mir Md. Jahangir Kabir",
+      "profileUrl": "https://www.cse.ruet.ac.bd/mmjahangirkabir",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo459.jpg",
+      "designation": "Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "https://www.linkedin.com/in/mir-md-jahangir-kabir-phd-14621074/?originalSubdomain=au",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Dr. Md. Al Mehedi Hasan",
+      "profileUrl": "https://www.cse.ruet.ac.bd/almehedihasan",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo237.jpg",
+      "designation": "Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "https://www.facebook.com/al.m.hassan",
+        "gs": "https://scholar.google.com/citations?user=kMspjFIAAAAJ&hl=en",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Professor Dr. Md. Ali Hossain",
+      "profileUrl": "https://www.cse.ruet.ac.bd/aliruet",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo9.png",
+      "designation": "Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "https://www.facebook.com/alicse03",
+        "gs": "https://scholar.google.co.jp/citations?user=C7ntpAIAAAAJ&hl=ja",
+        "li": "https://www.linkedin.com/in/md-ali-hossain-418887b0/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Dr. Md. Arafat Hossain",
+      "profileUrl": "https://www.cse.ruet.ac.bd/arafatruet03",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo448.jpg",
+      "designation": "Associate Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Shyla Afroge",
+      "profileUrl": "https://www.cse.ruet.ac.bd/shylaruet",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo441.jpg",
+      "designation": "Associate Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Associate Professor 3",
+      "profileUrl": "https://www.cse.ruet.ac.bd",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/assets/images/default_avatar.png",
+      "designation": "Associate Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Syed Tauhid Zuhori",
+      "profileUrl": "https://www.cse.ruet.ac.bd/tauhidruet",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/assets/images/default_avatar.png",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Firoz Mahmud",
+      "profileUrl": "https://www.cse.ruet.ac.bd/fmahmud",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/assets/images/default_avatar.png",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Biprodip Pal",
+      "profileUrl": "https://www.cse.ruet.ac.bd/biprodip",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo385.png",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "",
+        "gs": "https://scholar.google.com/citations?user=Bbujcf8AAAAJ&hl=en",
+        "li": "https://www.linkedin.com/in/biprodip/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Emrana Kabir Hashi",
+      "profileUrl": "https://www.cse.ruet.ac.bd/emranakabir",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo445.jpg",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Mumu Aktar",
+      "profileUrl": "https://www.cse.ruet.ac.bd/mumuruet",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/assets/images/default_avatar.png",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Sadia Zaman Mishu",
+      "profileUrl": "https://www.cse.ruet.ac.bd/Sadia_cse",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo446.jpg",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "https://www.linkedin.com/in/sadia-zaman-mishu-860a45119/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Abu Sayeed",
+      "profileUrl": "https://www.cse.ruet.ac.bd/abusayeedcse",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo59.jpg",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "https://m.facebook.com/abu.sariyad.sayeed",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Barshon Sen",
+      "profileUrl": "https://www.cse.ruet.ac.bd/BarshonSeN",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo447.jpg",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Nahin Ul Sadad",
+      "profileUrl": "https://www.cse.ruet.ac.bd/nahinsd100",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo460.png",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "https://www.linkedin.com/in/nahin-ul-sadad-694b59119/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Md. Zahirul Islam",
+      "profileUrl": "https://www.cse.ruet.ac.bd/kmzahir61",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo125.png",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "https://www.facebook.com/ZahirulIslam.Shafiq",
+        "gs": "https://scholar.google.com/citations?user=_2kj7XQAAAAJ&hl=en",
+        "li": "https://www.linkedin.com/in/zahirul-islam-310393153/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Md. Farukuzzaman Faruk",
+      "profileUrl": "https://www.cse.ruet.ac.bd/farukuzzaman",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo220.jpg",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "https://www.facebook.com/Faarukuzzaman",
+        "gs": "",
+        "li": "https://www.linkedin.com/in/md-farukuzzaman-faruk-269584132/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Mohiuddin Ahmed",
+      "profileUrl": "https://www.cse.ruet.ac.bd/mohiuddinnirobmn",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo769.png",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "https://facebook.com/mohiuddin.nirob.7",
+        "gs": "",
+        "li": "https://linkedin.com/in/mohiuddin-ahmed-mn",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Md. Azmain Yakin Srizon",
+      "profileUrl": "https://www.cse.ruet.ac.bd/azmainsrizon",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo768.jpg",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "https://www.facebook.com/Azmain.Yakin.Srizon/",
+        "gs": "https://scholar.google.com/citations?user=6zXjgsEAAAAJ&hl=en",
+        "li": "https://www.linkedin.com/in/azmain-yakin-srizon/",
+        "tw": "https://x.com/AYSrizon"
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "A. F. M. Minhazur Rahman",
+      "profileUrl": "https://www.cse.ruet.ac.bd/mrsaurov",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo914.jpg",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "https://www.facebook.com/profile.php?id=100011260117628",
+        "gs": "",
+        "li": "https://www.linkedin.com/in/mrsaurov/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Farjana Parvin",
+      "profileUrl": "https://www.cse.ruet.ac.bd/farjanaparvin",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo917.jpg",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "https://www.facebook.com/farjanaparvin.sumona",
+        "gs": "https://scholar.google.com/citations?hl=en&user=VHspwJYAAAAJ",
+        "li": "https://www.linkedin.com/in/farjana-parvin/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Utsha Das",
+      "profileUrl": "https://www.cse.ruet.ac.bd/utshadas5",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo1247.png",
+      "designation": "Assistant Professor",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "S.M. Shovan",
+      "profileUrl": "https://www.cse.ruet.ac.bd/shovan",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo410.png",
+      "designation": "Lecturer",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Md Rakibul Haque",
+      "profileUrl": "https://www.cse.ruet.ac.bd/rakibulhaq56",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo770.jpg",
+      "designation": "Lecturer",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "https://www.facebook.com/rakibulhouque.sazal/",
+        "gs": "",
+        "li": "https://www.linkedin.com/in/md-rakibul-haque/",
+        "tw": "https://twitter.com/rakibulhaq56"
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Tasmia Jannat",
+      "profileUrl": "https://www.cse.ruet.ac.bd/jannat22tasmia",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo919.jpeg",
+      "designation": "Lecturer",
+      "departmentShort": "CSE",
+      "onLeave": true,
+      "socials": {
+        "fb": "",
+        "gs": "https://scholar.google.com/citations?user=VCX7_noAAAAJ&hl=en",
+        "li": "https://www.linkedin.com/in/tasmia-jannat/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Md. Sozib Hossain",
+      "profileUrl": "https://www.cse.ruet.ac.bd/md.-sozib-hossain",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo1245.JPG",
+      "designation": "Lecturer",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "https://www.facebook.com/sozib1603039/",
+        "gs": "https://scholar.google.com/citations?hl=en&user=6tZx_AsAAAAJ",
+        "li": "https://www.linkedin.com/in/mdsozibhossain/",
+        "tw": "https://x.com/msozibh"
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Md. Nasif Osman Khansur",
+      "profileUrl": "https://www.cse.ruet.ac.bd/nasifosman0210",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo1244.jpg",
+      "designation": "Lecturer",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "https://www.facebook.com/nasif.shuvra",
+        "gs": "",
+        "li": "https://www.linkedin.com/in/nasif-osman-shuvra-391b5821b/",
+        "tw": ""
+      },
+      "isAdvisor": true
+    },
+    {
+      "name": "Md. Mazharul Islam",
+      "profileUrl": "https://www.cse.ruet.ac.bd/mazharultusher111",
+      "photoUrl": "https://www.cse.ruet.ac.bd/public/storage/profile/photo1246.jpg",
+      "designation": "Lecturer",
+      "departmentShort": "CSE",
+      "onLeave": false,
+      "socials": {
+        "fb": "",
+        "gs": "",
+        "li": "",
+        "tw": ""
+      },
+      "isAdvisor": true
+    }
+  ],
+  "staff": [
+    {
+      "id": "staff-1",
+      "name": "Mr. A. Karim",
+      "designation": "Administrative Officer",
+      "email": "office.cse@ruet.ac.bd",
+      "phone": "+880-1XXXXXXXXX",
+      "photoUrl": "/demoPhoto/18.jpg"
+    },
+    {
+      "id": "staff-2",
+      "name": "Ms. R. Jahan",
+      "designation": "Lab Assistant",
+      "email": "lab.cse@ruet.ac.bd",
+      "phone": "+880-1XXXXXXXXX",
+      "photoUrl": "/demoPhoto/19.jpg"
+    }
+  ]
+}

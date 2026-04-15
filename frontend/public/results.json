@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "students": {
+    "1903002": {
+      "studentId": "1903002",
+      "semesters": {
+        "1-1": {
+          "gpa": 3.75,
+          "credits": 19,
+          "courses": [
+            { "code": "CSE-1101", "title": "Introduction to CSE", "credits": 3, "grade": "A" },
+            { "code": "MAT-1103", "title": "Calculus", "credits": 3, "grade": "A-" },
+            { "code": "PHY-1105", "title": "Physics", "credits": 3, "grade": "B+" },
+            { "code": "ENG-1107", "title": "English", "credits": 2, "grade": "A" },
+            { "code": "CSE-1102", "title": "Programming Lab", "credits": 2, "grade": "A" }
+          ]
+        },
+        "1-2": {
+          "gpa": 3.68,
+          "credits": 20,
+          "courses": [
+            { "code": "CSE-1201", "title": "Data Structures", "credits": 3, "grade": "A-" },
+            { "code": "CSE-1202", "title": "Data Structures Lab", "credits": 2, "grade": "A" },
+            { "code": "EEE-1203", "title": "Basic Electrical", "credits": 3, "grade": "B+" },
+            { "code": "MAT-1205", "title": "Differential Equations", "credits": 3, "grade": "A-" }
+          ]
+        }
+      }
+    },
+
+    "2003088": {
+      "studentId": "2003088",
+      "semesters": {
+        "1-1": {
+          "gpa": 3.62,
+          "credits": 19,
+          "courses": [
+            { "code": "CSE-1101", "title": "Introduction to CSE", "credits": 3, "grade": "A-" },
+            { "code": "MAT-1103", "title": "Calculus", "credits": 3, "grade": "B+" },
+            { "code": "PHY-1105", "title": "Physics", "credits": 3, "grade": "A" }
+          ]
+        },
+        "4-1": {
+          "gpa": 3.80,
+          "credits": 18,
+          "courses": [
+            { "code": "CSE-4101", "title": "Machine Learning", "credits": 3, "grade": "A" },
+            { "code": "CSE-4103", "title": "Web Engineering", "credits": 3, "grade": "A-" },
+            { "code": "CSE-4199", "title": "Project", "credits": 4, "grade": "A" }
+          ]
+        }
+      }
+    },
+
+    "2103058": {
+      "studentId": "2103058",
+      "semesters": {
+        "1-1": {
+          "gpa": 3.55,
+          "credits": 19,
+          "courses": [
+            { "code": "CSE-1101", "title": "Introduction to CSE", "credits": 3, "grade": "B+" },
+            { "code": "MAT-1103", "title": "Calculus", "credits": 3, "grade": "A-" },
+            { "code": "ENG-1107", "title": "English", "credits": 2, "grade": "A" }
+          ]
+        },
+        "3-2": {
+          "gpa": 3.70,
+          "credits": 20,
+          "courses": [
+            { "code": "CSE-3201", "title": "Database Systems", "credits": 3, "grade": "A" },
+            { "code": "CSE-3202", "title": "Database Lab", "credits": 2, "grade": "A" },
+            { "code": "CSE-3205", "title": "Computer Networks", "credits": 3, "grade": "A-" }
+          ]
+        }
+      }
+    },
+
+    "2303120": {
+      "studentId": "2303120",
+      "semesters": {
+        "1-1": {
+          "gpa": 3.40,
+          "credits": 18,
+          "courses": [
+            { "code": "CSE-1101", "title": "Introduction to CSE", "credits": 3, "grade": "B+" },
+            { "code": "MAT-1103", "title": "Calculus", "credits": 3, "grade": "B" },
+            { "code": "ENG-1107", "title": "English", "credits": 2, "grade": "A-" }
+          ]
+        },
+        "1-2": {
+          "gpa": 3.50,
+          "credits": 20,
+          "courses": [
+            { "code": "CSE-1201", "title": "Data Structures", "credits": 3, "grade": "B+" },
+            { "code": "CSE-1202", "title": "Data Structures Lab", "credits": 2, "grade": "A" }
+          ]
+        }
+      }
+    }
+  }
+}

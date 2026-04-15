@@ -1,0 +1,298 @@
+// CR data — 2 CRs per section (A, B, C) per batch (19–23)
+// isCR: true = Class Representative
+
+export const CR_DATA = [
+  // ── Batch 19 ──────────────────────────────────────
+  {
+    name: "Samiul Islam",
+    studentId: "1903002",
+    email: "samiul@cse.ruet.ac.bd",
+    batch: "19",
+    section: "A",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Tahmid Hasan",
+    studentId: "1903045",
+    email: "tahmid@cse.ruet.ac.bd",
+    batch: "19",
+    section: "A",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Anika Tabassum",
+    studentId: "1903102",
+    email: "anika@cse.ruet.ac.bd",
+    batch: "19",
+    section: "B",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Rafiqul Islam",
+    studentId: "1903105",
+    email: "rafiq@cse.ruet.ac.bd",
+    batch: "19",
+    section: "B",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Nafisa Kamal",
+    studentId: "1903120",
+    email: "nafisa@cse.ruet.ac.bd",
+    batch: "19",
+    section: "C",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Ariful Haque",
+    studentId: "1903125",
+    email: "ariful@cse.ruet.ac.bd",
+    batch: "19",
+    section: "C",
+    isCR: false,
+    photoDataUrl: "",
+  },
+
+  // ── Batch 20 ──────────────────────────────────────
+  {
+    name: "Farhana Akter",
+    studentId: "2003012",
+    email: "farhana@cse.ruet.ac.bd",
+    batch: "20",
+    section: "A",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Tanvir Ahmed",
+    studentId: "2003088",
+    email: "tanvir@cse.ruet.ac.bd",
+    batch: "20",
+    section: "A",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Zubayer Al Mahmud",
+    studentId: "2003115",
+    email: "zubayer@cse.ruet.ac.bd",
+    batch: "20",
+    section: "B",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Maliha Tabassum",
+    studentId: "2003118",
+    email: "maliha@cse.ruet.ac.bd",
+    batch: "20",
+    section: "B",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Sajid Hasan",
+    studentId: "2003140",
+    email: "sajid@cse.ruet.ac.bd",
+    batch: "20",
+    section: "C",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Raisa Islam",
+    studentId: "2003145",
+    email: "raisa@cse.ruet.ac.bd",
+    batch: "20",
+    section: "C",
+    isCR: true,
+    photoDataUrl: "",
+  },
+
+  // ── Batch 21 ──────────────────────────────────────
+  {
+    name: "Maliha Islam",
+    studentId: "2103005",
+    email: "maliha@cse.ruet.ac.bd",
+    batch: "21",
+    section: "A",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Rifath Chowdhury",
+    studentId: "2103099",
+    email: "rifath@cse.ruet.ac.bd",
+    batch: "21",
+    section: "A",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Mehedi Hasan",
+    studentId: "2103054",
+    email: "mehedi@cse.ruet.ac.bd",
+    batch: "21",
+    section: "B",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Nusrat Jahan",
+    studentId: "2103058",
+    email: "nusrat@cse.ruet.ac.bd",
+    batch: "21",
+    section: "B",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Imtiaz Ahmed",
+    studentId: "2103130",
+    email: "imtiaz@cse.ruet.ac.bd",
+    batch: "21",
+    section: "C",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Sabrina Sultana",
+    studentId: "2103135",
+    email: "sabrina@cse.ruet.ac.bd",
+    batch: "21",
+    section: "C",
+    isCR: true,
+    photoDataUrl: "",
+  },
+
+  // ── Batch 22 ──────────────────────────────────────
+  {
+    name: "Sadman Sakib",
+    studentId: "2203021",
+    email: "sadman@cse.ruet.ac.bd",
+    batch: "22",
+    section: "A",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Ayesha Siddiqua",
+    studentId: "2203110",
+    email: "ayesha@cse.ruet.ac.bd",
+    batch: "22",
+    section: "A",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Ishrat Jahan",
+    studentId: "2203067",
+    email: "ishrat@cse.ruet.ac.bd",
+    batch: "22",
+    section: "B",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Fahim Muntasir",
+    studentId: "2203070",
+    email: "fahim@cse.ruet.ac.bd",
+    batch: "22",
+    section: "B",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Kamrul Islam",
+    studentId: "2203150",
+    email: "kamrul@cse.ruet.ac.bd",
+    batch: "22",
+    section: "C",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Lutfun Nahar",
+    studentId: "2203155",
+    email: "lutfun@cse.ruet.ac.bd",
+    batch: "22",
+    section: "C",
+    isCR: true,
+    photoDataUrl: "",
+  },
+
+  // ── Batch 23 ──────────────────────────────────────
+  {
+    name: "Nabil Mutasim",
+    studentId: "2303120",
+    email: "nabil@cse.ruet.ac.bd",
+    batch: "23",
+    section: "A",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Rayhan Kabir",
+    studentId: "2303044",
+    email: "rayhan@cse.ruet.ac.bd",
+    batch: "23",
+    section: "A",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Zubayer Bin Walid",
+    studentId: "2303015",
+    email: "zubayer@cse.ruet.ac.bd",
+    batch: "23",
+    section: "B",
+    isCR: false,
+    photoDataUrl: "",
+  },
+  {
+    name: "Sumaiya Akter",
+    studentId: "2303018",
+    email: "sumaiya@cse.ruet.ac.bd",
+    batch: "23",
+    section: "B",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Hasibul Islam",
+    studentId: "2303160",
+    email: "hasib@cse.ruet.ac.bd",
+    batch: "23",
+    section: "C",
+    isCR: true,
+    photoDataUrl: "",
+  },
+  {
+    name: "Tasfia Ahmed",
+    studentId: "2303165",
+    email: "tasfia@cse.ruet.ac.bd",
+    batch: "23",
+    section: "C",
+    isCR: false,
+    photoDataUrl: "",
+  },
+]
+
+// Helper: get only CR students grouped by batch → section
+export const getCRsByBatchAndSection = () => {
+  const result = {}
+  CR_DATA.filter(s => s.isCR).forEach(student => {
+    if (!result[student.batch]) result[student.batch] = {}
+    if (!result[student.batch][student.section]) result[student.batch][student.section] = []
+    result[student.batch][student.section].push(student)
+  })
+  return result
+}
+
+export const BATCHES = ["19", "20", "21", "22", "23"]
+export const SECTIONS = ["A", "B", "C"]
