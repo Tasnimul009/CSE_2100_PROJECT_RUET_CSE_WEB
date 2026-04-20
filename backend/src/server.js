@@ -36,8 +36,25 @@ if (!rawCorsOrigin || rawCorsOrigin === '*') {
 		.map((item) => item.trim())
 		.filter(Boolean)
 
+	// Handle both with and without trailing slashes
 	app.use(cors({
-		origin: allowedOrigins,
+		origin: (origin, callback) => {
+			if (!origin) return callback(null, true)
+			
+			// Normalize: remove trailing slash for comparison
+			const normalize = (url) => url.replace(/\/$/, '')
+			const normalizedOrigin = normalize(origin)
+			
+			const isAllowed = allowedOrigins.some(allowed => 
+				normalize(allowed) === normalizedOrigin
+			)
+			
+			if (isAllowed) {
+				callback(null, true)
+			} else {
+				callback(new Error('CORS not allowed'))
+			}
+		},
 		credentials: true,
 	}))
 }
@@ -76,14 +93,14 @@ const PORT = Number.parseInt(process.env.PORT || '5000', 10)
 const startServer = async () => {
 	try {
 		const mongoUriConfigured = Boolean(process.env.MONGODB_URI || process.env.MONGO_URI)
-		console.log(`Startup config -> NODE_ENV=${process.env.NODE_ENV || 'undefined'}, PORT=${PORT}, MONGO_URI_SET=${mongoUriConfigured}`)
+		console.log(Startup config -> NODE_ENV=${process.env.NODE_ENV || 'undefined'}, PORT=${PORT}, MONGO_URI_SET=${mongoUriConfigured})
 
 		await connectMongoDB()
 		await ensureDefaultAdmin()
 		configureCloudinary()
 
 		app.listen(PORT, () => {
-			console.log(`Backend running on port ${PORT}`)
+			console.log(Backend running on port ${PORT})
 		})
 	} catch (error) {
 		console.error('Could not start backend.')
